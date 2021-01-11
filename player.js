@@ -23,11 +23,6 @@ if(source != null) {
     player.on('ready', event => {
       if(event) {
         document.getElementById('ads-conteiner').style.display = "flex";
-
-        if(localStorage.getItem("time") != null) {
-          const value = localStorage.getItem("time");
-          player.currentTime = value;
-        }
       }
     });
     
@@ -36,11 +31,6 @@ if(source != null) {
       if(event) {
         document.getElementById('ads-conteiner').style.display = "none";
       }
-
-        //a cada 5 segundos captura a onde o video parou. 
-        setInterval(function(){
-          localStorage.setItem("time", player.currentTime);
-        }, 5000);
     });
   
     //Quando pausado.
