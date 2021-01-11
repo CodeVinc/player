@@ -35,6 +35,11 @@ if(source != null) {
       if(event) {
         document.getElementById('ads-conteiner').style.display = "none";
       }
+
+        //a cada 5 segundos captura a onde o video parou. 
+        setInterval(function(){
+          localStorage.setItem("time", player.currentTime);
+        }, 5000);
     });
   
     //Quando pausado.
@@ -59,10 +64,6 @@ if(source != null) {
       player.play();
     });
 
-    //a cada 5 segundos captura a onde o video parou. 
-    setInterval(function(){
-      localStorage.setItem("time", player.currentTime);
-    }, 5000);
     
     // Expose player so it can be used from the console
     window.player = player;
