@@ -13,6 +13,15 @@ body {
 	max-width: 950px;
 }
 
+.footer {
+	color: rgb(206, 206, 206);
+	position: fixed;
+	bottom: 10px;
+	margin: 10px auto;
+	text-align: center;
+	width: 100%;
+}
+
 #ads-conteiner {
 	position: absolute;
 	width: 100%;
@@ -51,4 +60,4 @@ body {
 
 @media only screen and (max-width: 600px) {
 	#ads-conteiner #ads-box { margin: 4em auto; }
-  }
+}
