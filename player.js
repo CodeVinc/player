@@ -7,7 +7,7 @@ if(source != null) {
 
   document.addEventListener('DOMContentLoaded', () => {
 
-    const video = document.querySelector('video');
+    const video = document.querySelector('#video');
     
     if (!Hls.isSupported()) {
       video.src = source;
@@ -18,7 +18,7 @@ if(source != null) {
       hls.attachMedia(video);
       window.hls = hls;
     }
-    
+
     //Quando pronto.
     player.on('ready', event => {
       if(event) {
@@ -33,7 +33,7 @@ if(source != null) {
       }
     });
   
-     //Quando pausado.
+    //Quando pausado.
     player.on('pause', event => {
         if(event) {
           document.getElementById('ads-conteiner').style.display = "flex";

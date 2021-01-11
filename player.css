@@ -24,10 +24,11 @@ body {
 #ads-conteiner #ads-box {
 	margin: 6em auto;
 	color: #999;
-	background-color: #444;
+	background-color: #4a5464;
 	padding: 1em 1em;
 	border-radius: 3px;
 }
+
 #ads-conteiner #ads-box #ads-img {
 	position: relative;
 }
