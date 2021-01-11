@@ -1,7 +1,7 @@
 const player = new Plyr('video');
 
 const url = new URLSearchParams(document.location.search.substring(1));
-const video_url = url.get('id');
+const video_url = url.get('video');
 
 if(video_url != null) {
   player.source = {
