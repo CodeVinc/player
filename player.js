@@ -25,7 +25,8 @@ if(source != null) {
         document.getElementById('ads-conteiner').style.display = "flex";
 
         if(localStorage.getItem("time") != null) {
-          player.currentTime = localStorage.getItem("time");
+          const value = localStorage.getItem("time");
+          player.currentTime = value;
         }
       }
     });
