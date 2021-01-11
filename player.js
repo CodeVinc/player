@@ -7,7 +7,7 @@ if(source != null) {
 
   document.addEventListener('DOMContentLoaded', () => {
 
-    const video = document.querySelector('#video');
+    const video = document.querySelector('video');
     
     if (!Hls.isSupported()) {
       video.src = source;
