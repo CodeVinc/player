@@ -23,6 +23,10 @@ if(source != null) {
     player.on('ready', event => {
       if(event) {
         document.getElementById('ads-conteiner').style.display = "flex";
+
+        if(localStorage.getItem("time") != null) {
+          player.currentTime = localStorage.getItem("time");
+        }
       }
     });
     
@@ -47,12 +51,18 @@ if(source != null) {
       }
     });
     
+    //video ads
     const adsClose = document.getElementById("ads-close");
     
     adsClose.addEventListener('click', function() {
       document.getElementById('ads-conteiner').style.display = "none";
       player.play();
     });
+
+    //a cada 5 segundos captura a onde o video parou. 
+    setInterval(function(){
+      localStorage.setItem("time", player.currentTime);
+    }, 5000);
     
     // Expose player so it can be used from the console
     window.player = player;
