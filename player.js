@@ -8,7 +8,7 @@ if(video_url != null) {
     type: 'video',
     sources: [
       {
-        src: atob(video_url),
+        src: video_url,
         type: 'video/mp4',
         size: 950,
       }
