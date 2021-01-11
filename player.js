@@ -6,8 +6,7 @@ const source = url.get('video');
 if(source != null) {
 
   document.addEventListener('DOMContentLoaded', () => {
-    
-    // const source = 'https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8';
+
     const video = document.querySelector('video');
     
     if (!Hls.isSupported()) {
@@ -19,6 +18,7 @@ if(source != null) {
       hls.attachMedia(video);
       window.hls = hls;
     }
+    
     //Quando pronto.
     player.on('ready', event => {
       if(event) {
