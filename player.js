@@ -1,7 +1,7 @@
 const player = new Plyr('video');
 
-//const url = new URLSearchParams(document.location.search.substring(1));
-const source = document.location.search.substring(6)
+const key = document.location.search.substring(6);
+const source = atob(key);
 
 if(source != "" && source.length > 1) 
 {
